@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+AR:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    --bg-color:#191f36;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+    --bf-color: #262B40;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+}
+
+section{
+    min-height: 100vh;
+    padding: 7rem 9% 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem ;
+    background: var(--bg-color);
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: default;
+}
+.navbar ul{
+    display: flex;
+} 
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:active{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3{
+    font-size: 2rem;
+    font-weight: 700;
+}
+span{
+    color: var(--main-color);
+}
+.home-content h1{
+    font-size: 3rem;
+    line-height: 1.3;
+}
+.home-img img{
+    width: 30vw;
+}
+.home-content p{
+    font-size: 1rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: transparent;
+    border: .1rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin: 1rem 1rem 1rem 0;
+    text-decoration: none;
+}
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--bf-color);
+}
+.btn{
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    background: var(--main-color);
+    border-radius: 3rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 500;
+    transition: .5s ease;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--bf-color);
+}
+.aboutImg img{
+    height: 40vh;
+    width: 30vw;
+}
+.heading{
+    text-align: center;
+    font-size: 2.7rem;
+}
+.abtContent h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.abtContent h3{
+    font-size: 2rem;
+}
+.abtContent p{
+    font-size: 1.2rem;
+    margin: 1rem 0 3rem;
+}
+.services h2{
+    margin-bottom: 4rem;
+}
+.servicesCont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.servicesCont .servicesBox{
+    flex: 1 1 10rem;
+    background: var(--bf-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: .1rem solid var(--bg-color);
+    transition: .5s ease;
+}
+.servicesCont .servicesBox:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+.servicesBox h3{
+    font-size: 1.6rem;
+}
+.servicesBox i{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+.servicesBox p{
+    font-size: 1rem;
+    margin: 1rem 0 1rem;
+}
+.portfolio{
+    background: var(--bf-color);
+}
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+.portfolioCont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.portfolioCont .portfolioBox{
+    position: relative;
+    border-radius: .9rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.portfolioBox img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    transition: .5s ease;
+    opacity: 0.7;
+
+}
+.portfolioBox:hover img{
+    transform: scale(1.1);
+}
+.portfolioBox .portfolioLayer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.portfolioBox:hover .portfolioLayer{
+    transform: translateY(0);
+}
+.portfolioLayer h4{
+    font-size: 1.7rem;
+}
+.portfolioLayer p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+}
+.portfolioLayer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.portfolioLayer a i{
+    font-size: 1.5rem;
+    color: var(--bg-color);
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 50rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .inputBox input,
+.contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: .8rem;
+    border: 1px solid var(--main-color);
+    margin: .7rem 0;
+}
+.contact form .inputBox input{
+    width: 45%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
+    cursor: pointer;
+}
+.reviews {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+  
+  .review-card {
+    background: var(--main-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+    font-style: italic;
+    color:var(--text-color);
+  }
+  
+  .review-card h4 {
+    margin-top: 15px;
+    font-style: normal;
+    color: #222;
+  }  
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+@media only screen and (max-width:850px){
+    #menu-icon{
+        display: block;
+        font-size: 2rem;
+    }
+    .navbar{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar ul{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2rem;
+    }
+    .home-content h1{
+       
+        font-size: 2rem;
+    }
+    .home-content p{
+        font-size: 1.5rem;
+    }
+    .home-content{
+        order: 2;
+    }
+    .home-img img{
+        width: 90vw;
+        height: 30vh;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .abtContent p{
+        font-size: 1.5rem;
+    }
+    .aboutImg img{
+        width: 90vw;
+    }
+    .servicesCont{
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .servicesBox{
+        width: 100%;
+        padding: 0 ;
+    }
+    .servicesBox p{
+        font-size: 1.5rem;
+    }
+    .servicesBox h3{
+        font-size: 2rem;
+    }
+    .portfolioCont{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    
+}
