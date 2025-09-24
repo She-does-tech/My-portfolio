@@ -339,6 +339,9 @@ span{
 }
 
 @media only screen and (max-width:850px){
+    *{
+        overflow-y: hidden;
+    }
     #menu-icon{
         display: block;
         font-size: 2rem;
